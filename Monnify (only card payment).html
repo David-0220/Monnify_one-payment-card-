@@ -1,7 +1,7 @@
 <html>
 <head>
-    <script type="text/javascript" src="https://sdk.monnify.com/plugin/monnify.js"></script>
-    <script>
+    <script type="text/javascript" src="https://sdk.monnify.com/plugin/monnify.js">
+   
         function payWithMonnify() {
             MonnifySDK.initialize({
                 amount: 100,
@@ -32,7 +32,7 @@
                     "feePercentage": 50,
                     "splitAmount": 2100,
                     "feeBearer": true
-                }],
+                ],
                 onLoadStart: () => {
                     console.log("loading has started");
                 },
@@ -41,19 +41,19 @@
                 },
                 onComplete: function(response) {
                     //Implement what happens when the transaction is completed.
-                    console.log(response);
+                    console.log("response");
                 },
                 onClose: function(data) {
                     //Implement what should happen when the modal is closed here
-                    console.log(data);
-                }
-            });
-        }
+                    console.log("data");
+                }, 
+            
+        
     </script>
 </head>
-<body>
+    <body>
     <div>
         <button type="button" onclick="payWithMonnify()">Pay With Monnify</button>
     </div>
-</body>
+    </body>
 </html>
